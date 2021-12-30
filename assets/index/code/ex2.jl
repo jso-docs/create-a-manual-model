@@ -1,3 +1,7 @@
 # This file was generated, do not modify it. # hide
-using LinearAlgebra
-norm(A * x - b), norm(x .- 1)
+using JSOSolvers
+
+output = lbfgs(nlp)
+βsol = output.solution
+ŷ = round.(h(βsol, X))
+sum(ŷ .== y) / n
