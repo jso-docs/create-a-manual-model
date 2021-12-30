@@ -1,7 +1,7 @@
-@def title = "Template"
+@def title = "How to create a model from the function and its derivatives"
 @def showall = true
-@def tags = ["template", "fix-me"]
+@def tags = ["models", "manual"]
 
-\preamble{AUTHORS}
+\preamble{Abel S. Siqueira}
 
 \literate{/index.jl}
