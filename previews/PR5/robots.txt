@@ -1,0 +1,4 @@
+Sitemap: https://abelsiqueira.netlify.app/previews/PR5/sitemap.xml
+
+User-agent: *
+Disallow:
