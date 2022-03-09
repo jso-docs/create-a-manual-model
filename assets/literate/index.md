@@ -16,7 +16,7 @@ $$\nabla \ell(\beta) = \frac{-1}{n} \sum_{i=1}^n \big(y_i - h_{\beta}(x_i)\big) 
 
 where $e$ is the vector with all components equal to 1.
 
-```julia:ex1
+````julia:ex1
 using ManualNLPModels
 using LinearAlgebra
 
@@ -50,25 +50,25 @@ nlp = NLPModel(
   β -> myfun(β, X, y),
   grad=(out, β) -> mygrad(out, β, X, y),
 )
-```
+````
 
 Notice that the `grad` function must modify the first argument so you don't waste memory creating arrays.
 
 Only the `obj`, `grad` and `grad!` functions will be defined for this model, so you need to choose your solver carefully.
 We'll use `lbfgs` from `JSOSolvers.jl`.
 
-```julia:ex2
+````julia:ex2
 using JSOSolvers
 
 output = lbfgs(nlp)
 βsol = output.solution
 ŷ = round.(h(βsol, X))
 sum(ŷ .== y) / n
-```
+````
 
 We can compare against other approaches.
 
-```julia:ex3
+````julia:ex3
 using BenchmarkTools
 using Logging
 
@@ -82,9 +82,9 @@ using Logging
     lbfgs(nlp)
   end
 end
-```
+````
 
-```julia:ex4
+````julia:ex4
 using ADNLPModels
 
 @benchmark begin
@@ -93,9 +93,9 @@ using ADNLPModels
     lbfgs(adnlp)
   end
 end
-```
+````
 
-```julia:ex5
+````julia:ex5
 using JuMP
 using NLPModelsJuMP
 
@@ -119,22 +119,22 @@ using NLPModelsJuMP
     lbfgs(jumpnlp)
   end
 end
-```
+````
 
 Or just the grad calls:
 
-```julia:ex6
+````julia:ex6
 using NLPModels
 
 @benchmark grad(nlp, β)
-```
+````
 
-```julia:ex7
+````julia:ex7
 adnlp = ADNLPModel(β -> myfun(β, X, y), zeros(p + 1))
 @benchmark grad(adnlp, β)
-```
+````
 
-```julia:ex8
+````julia:ex8
 model = Model()
 @variable(model, modelβ[1:p+1])
 @NLexpression(model,
@@ -151,7 +151,7 @@ model = Model()
 )
 jumpnlp = MathOptNLPModel(model)
 @benchmark grad(jumpnlp, β)
-```
+````
 
 Take these benchmarks with a grain of salt. They are being run on a github actions server with global variables.
 If you want to make an informed option, you should consider performing your own benchmarks.
