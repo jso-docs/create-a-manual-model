@@ -209,10 +209,10 @@ uuid = "10dff2fc-5484-5881-a0e0-c90441020f8a"
 version = "0.7.6"
 
 [[deps.JuMP]]
-deps = ["Calculus", "DataStructures", "ForwardDiff", "JSON", "LinearAlgebra", "MathOptInterface", "MutableArithmetics", "NaNMath", "OrderedCollections", "Printf", "Random", "SparseArrays", "SpecialFunctions", "Statistics"]
-git-tree-sha1 = "fe0f87cc077fc6a23c21e469318993caf2947d10"
+deps = ["Calculus", "DataStructures", "ForwardDiff", "LinearAlgebra", "MathOptInterface", "MutableArithmetics", "NaNMath", "OrderedCollections", "Printf", "SparseArrays", "SpecialFunctions"]
+git-tree-sha1 = "936e7ebf6c84f0c0202b83bb22461f4ebc5c9969"
 uuid = "4076af6c-e467-56ae-b986-b466b2749572"
-version = "0.22.3"
+version = "1.0.0"
 
 [[deps.Krylov]]
 deps = ["LinearAlgebra", "Printf", "SparseArrays"]
@@ -294,9 +294,9 @@ uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
 
 [[deps.MathOptInterface]]
 deps = ["BenchmarkTools", "CodecBzip2", "CodecZlib", "JSON", "LinearAlgebra", "MutableArithmetics", "OrderedCollections", "Printf", "SparseArrays", "Test", "Unicode"]
-git-tree-sha1 = "e8c9653877adcf8f3e7382985e535bb37b083598"
+git-tree-sha1 = "09be99195f42c601f55317bd89f3c6bbaec227dc"
 uuid = "b8f27783-ece8-5eb3-8dc8-9495eed66fee"
-version = "0.10.9"
+version = "1.1.1"
 
 [[deps.MbedTLS]]
 deps = ["Dates", "MbedTLS_jll", "Random", "Sockets"]
@@ -316,27 +316,27 @@ uuid = "14a3606d-f60d-562e-9121-12d972cd8159"
 
 [[deps.MutableArithmetics]]
 deps = ["LinearAlgebra", "SparseArrays", "Test"]
-git-tree-sha1 = "842b5ccd156e432f369b204bb704fd4020e383ac"
+git-tree-sha1 = "ba8c0f8732a24facba709388c74ba99dcbfdda1e"
 uuid = "d8a4904e-b15c-11e9-3269-09a3773c0cb0"
-version = "0.3.3"
+version = "1.0.0"
 
 [[deps.NLPModels]]
 deps = ["FastClosures", "LinearAlgebra", "LinearOperators", "Printf", "SparseArrays"]
-git-tree-sha1 = "e17945150641249d1658637e4faf71a049067d73"
+git-tree-sha1 = "117e921f6e584ab50f66f9982306da0d9dedec29"
 uuid = "a4795742-8479-5a88-8948-cc11e1c8c1a6"
-version = "0.17.2"
+version = "0.18.3"
 
 [[deps.NLPModelsJuMP]]
 deps = ["JuMP", "LinearAlgebra", "MathOptInterface", "NLPModels", "Printf", "SparseArrays"]
-git-tree-sha1 = "12cbb1ef1574b0e14136e7c0f32d8b3c5ea56793"
+git-tree-sha1 = "0ee66e66813de4068a6b2538c2ea0561088c558b"
 uuid = "792afdf1-32c1-5681-94e0-d7bf7a5df49e"
-version = "0.8.4"
+version = "0.10.1"
 
 [[deps.NLPModelsModifiers]]
 deps = ["FastClosures", "LinearAlgebra", "LinearOperators", "NLPModels", "Printf", "SparseArrays"]
-git-tree-sha1 = "705d402d1fe1837f0c07dd1d7b137b390fb764c5"
+git-tree-sha1 = "18dcf0c511288a237e25ee61154a8fe1d239f8dd"
 uuid = "e01155f1-5c6f-4375-a9d8-616dd036575f"
-version = "0.4.3"
+version = "0.5.1"
 
 [[deps.NaNMath]]
 git-tree-sha1 = "b086b7ea07f8e38cf122f5016af580881ac914fe"
