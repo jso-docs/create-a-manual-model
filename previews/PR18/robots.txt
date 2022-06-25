@@ -1,0 +1,4 @@
+Sitemap: https://create-a-manual-model.netlify.app/previews/PR18/sitemap.xml
+
+User-agent: *
+Disallow:
